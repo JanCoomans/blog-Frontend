@@ -11,5 +11,9 @@
     "@nuxtjs/strapi": "^1.6.3",
     "@nuxtjs/tailwindcss": "^6.1.3",
     "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0"
   }
 }

@@ -10,9 +10,9 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            title: 'JanCoomans app',
+            title: 'JanCoomans',
             meta: [
-                { name: "description", content: 'personal blog of Jan Coomans. Made with Nuxt.js and Strapi CMS.'}
+                { name: "description", content: 'personal portfolio of Jan Coomans. Made with Nuxt.js, tailwind CSS and Strapi CMS.'}
             ],
             script: [
                 {
@@ -20,12 +20,12 @@ export default defineNuxtConfig({
                 }
             ],
             link: [
-                { rel: 'stylesheet', href: '' }
+                //{ rel: 'stylesheet', href: '' }
             ]
         }
     },
     runtimeConfig: {
         //currencyKey: process.env.CURRENCY_API_KEY,
         public: {}
-    }
+    },
 })
