@@ -12,12 +12,12 @@ module.exports = {
       },
       colors: {
         primary: {
-          500: '#17232D',
-          700: '#18222E',
-          900: '#0F141B',
+          500: 'var(--primary-500)',
+          700: 'var(--primary-700)',
+          900: 'var(--primary-900)',
         },
-        secondary: '#2A4454',
-        accent: '#FECD6C',
+        secondary: 'var(--secondary)',
+        accent: 'var(--accent)',
       },
       borderWidth: {
         3: '3px',
@@ -35,6 +35,8 @@ module.exports = {
         '17': '4.25rem',// 68px
         '18': '4.5rem',// 72px
         '19': '4.75rem',// 76px
+        '30': '7.5rem',// 120px
+        '35': '8.75rem',// 140px
         'inherit': 'inherit',
       },
       minHeight: {
@@ -43,6 +45,9 @@ module.exports = {
         '9': '2.25rem',
         '10': '2.5rem',
         '18': '4.25rem',
+      },
+      maxWidth: {
+        '8xl': '96rem',
       },
       fontSize: {
       },
