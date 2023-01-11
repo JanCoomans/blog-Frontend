@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xs': '576px',
-        // => @media (min-width: 576px) { ... }
+        'xs': '576px'/* => @media (min-width: 576px) { ... } */,
+        'lm': '960px'/* => @media (min-width: 960px) { ... }*/,
       },
       fontFamily: {
         dmmono: ['DM Mono'],
@@ -32,11 +32,13 @@ module.exports = {
       spacing: {
         '2px': '0.125',
         '3px': '0.188rem',
-        '17': '4.25rem',// 68px
-        '18': '4.5rem',// 72px
-        '19': '4.75rem',// 76px
-        '30': '7.5rem',// 120px
-        '35': '8.75rem',// 140px
+        '13': '3.25rem'/* 52px */,
+        '15': '3.75rem'/* 60px */,
+        '17': '4.25rem'/* 68px */,
+        '18': '4.5rem'/* 72px */,
+        '19': '4.75rem'/* 76px */,
+        '30': '7.5rem'/* 120px */,
+        '35': '8.75rem'/* 140px */,
         'inherit': 'inherit',
       },
       minHeight: {
@@ -50,8 +52,7 @@ module.exports = {
         '8xl': '96rem',
       },
       fontSize: {
-      },
-      lineHeight: {
+        title: '3.625rem',
       }
     },
   },

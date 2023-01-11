@@ -12,12 +12,18 @@
     --primary-700: #18222E;
     --primary-500: #17232D;
     --secondary: #2A4454;
-    --accent: #FECD6C,
+    --accent: #FECD6C;
 }
 
 
 @layer components {
-    /* Header links.  Active & hover state. */
+    /* GENERAL */
+    .btn-accent {
+        @apply cursor-pointer border-accent text-accent rounded-md border-3 transition-all hover:border-primary-500 hover:bg-primary-500 hover:text-slate-100 shadow;
+    }
+
+
+    /* HEADER: links. Active & hover state. */
     .highlight-active-link{
         @apply absolute -translate-x-2/4 left-2/4 w-11 h-3px -bottom-3 content-empty invisible md:visible;
     }
@@ -29,9 +35,23 @@
     .header-link{
         @apply relative hover:after:bg-white hover:after:highlight-active-link; 
     }
-    
-    .btn-accent {
-        @apply cursor-pointer border-accent text-accent rounded-md border-3 transition-all hover:border-primary-500 hover:bg-primary-500 hover:text-slate-100 shadow;
+
+
+    /* SKILLS */
+    .skill-item{
+        @apply inline-flex w-full md:w-auto lm:w-1/4 xl:w-1/5 items-center gap-4;
+    }
+
+    .skill-img{
+        @apply w-13 lg:w-16;
+    }
+
+    .skill-item svg{
+         @apply h-8 md:h-9 lg:h-10 w-auto;
+    }
+
+    .skill-item h3{
+        @apply inline-block md:flex-1 text-base sm:text-xl font-dmsans font-bold;
     }
 }
 
