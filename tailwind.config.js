@@ -52,6 +52,8 @@ module.exports = {
         '8xl': '96rem',
       },
       fontSize: {
+        '4xl1': '2.5rem',
+        '4xl2': '2.75rem',
         title: '3.625rem',
       }
     },
