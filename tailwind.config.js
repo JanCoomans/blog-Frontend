@@ -55,6 +55,10 @@ module.exports = {
         '4xl1': '2.5rem',
         '4xl2': '2.75rem',
         title: '3.625rem',
+      },
+      dropShadow: {
+        left: '-2px 4px 4px rgba(0, 0, 0, 0.5)',
+        right: '2px 4px 4px rgba(0, 0, 0, 0.5)',
       }
     },
   },

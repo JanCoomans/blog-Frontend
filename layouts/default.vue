@@ -39,11 +39,26 @@
 
         <!-- Output page content -->
         <slot></slot>
+
+        <!-- Footer Wave -->
+        <div class="relative">
+            <svg class="absolute -translate-y-full w-full sm:h-7 md:h-9 h-6" preserveAspectRatio="none" viewBox="0 0 1920 35">
+                <path class="fill-accent" d="M1405.8,15.5c-92.8,3.1-182.7,8.8-275.2,12.2c-131.8,4.9-269.1,5.2-400.7,0.1C602,23,469.3,11,342.9,4.9
+		        C230.9-0.5,108.5-2.7,0,4.1v31h1920v-11C1756.1,12.7,1578.2,9.8,1405.8,15.5L1405.8,15.5z" />
+                <path class="fill-primary-900" d="M1405.8,18.5c-92.8,3.1-182.7,8.8-275.2,12.2c-131.8,4.9-269.1,5.2-400.7,0.1C602,26,469.3,14,342.9,7.9
+		        C230.9,2.5,108.5,0.3,0,7.1v28h1920v-8C1756.1,15.7,1578.2,12.8,1405.8,18.5L1405.8,18.5z" />
+            </svg>
+        </div>
+        <footer>
+            <div class="w-full p-7 text-center bg-primary-900 font-dmmono text-xs">
+                <h5 class="">© Copyright 2022. Made by Jan Coomans</h5>
+            </div>
+        </footer>
     </div>
 </template>
 
 <script setup>
-    const isNavbarActive = ref(0);
+const isNavbarActive = ref(0);
 </script>
 
 <style scoped>

@@ -52,11 +52,23 @@
 
     /* CONTACT */
     .contact-item {
-        @apply max-w-xs w-screen py-3 px-4 bg-primary-900 rounded-md flex gap-5;
+        @apply max-w-xs w-full py-3 px-4 bg-primary-900 rounded-md drop-shadow-right flex;
+    }
+
+    .contact-item svg {
+        @apply mr-4;
+    }
+
+    .contact-divide-line{
+        @apply hidden xs:block w-px h-full bg-slate-300 opacity-50 mr-5;
     }
 
     .contact-item h4 {
-        @apply text-accent text-sm font-medium;
+        @apply font-dmmono leading-6 text-accent text-sm font-medium;
+    }
+
+    .contact-social {
+        @apply bg-primary-900 h-12 w-12 flex items-center justify-center rounded-full;
     }
 }
 
