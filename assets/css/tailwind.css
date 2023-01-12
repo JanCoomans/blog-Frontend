@@ -8,7 +8,7 @@
 
 :root{
     --primary-900-rgb: 15, 20, 27;
-    --primary-900: rgb(var(--primary-900-rgb));/* #0F141B */
+    --primary-900: rgb(var(--primary-900-rgb));/* #0E141B */
     --primary-700: #18222E;
     --primary-500: #17232D;
     --secondary: #2A4454;
@@ -48,6 +48,15 @@
 
     .skill-item h3{
         @apply text-center text-base md:text-xl font-dmsans font-bold;
+    }
+
+    /* CONTACT */
+    .contact-item {
+        @apply max-w-xs w-screen py-3 px-4 bg-primary-900 rounded-md flex gap-5;
+    }
+
+    .contact-item h4 {
+        @apply text-accent text-sm font-medium;
     }
 }
 
