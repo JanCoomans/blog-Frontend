@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <main>
         <Hero></Hero>
 
         <!-- Wave seperator -->
@@ -13,8 +13,9 @@
 
         <div class="bg-primary-900 flex flex-col gap-30">
             <div><!-- Filler --></div>
-            <!-- Insert Projects -->
+            <Projects></Projects>
             <Skills></Skills>
+            <div class="mb-8"><!-- Filler --></div>
         </div>
 
         <!-- Contact waves seperator -->
@@ -33,7 +34,7 @@
         </div>
 
         <Contact></Contact>
-    </div>
+    </main>
 
 
 </template>

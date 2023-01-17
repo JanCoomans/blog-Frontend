@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-secondary w-full px-7 pt-14 pb-24">
+    <section class="bg-secondary w-full px-7 pt-14 pb-24">
         <div class="max-w-7xl mx-auto">
             <SectionTitle :title="'contact'" :underline="true"></SectionTitle>
 
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 </template>
 

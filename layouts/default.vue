@@ -51,7 +51,7 @@
         </div>
         <footer>
             <div class="w-full p-7 text-center bg-primary-900 font-dmmono text-xs">
-                <h5 class="">© Copyright 2022. Made by Jan Coomans</h5>
+                <h5>© Copyright 2022. Made by Jan Coomans</h5>
             </div>
         </footer>
     </div>

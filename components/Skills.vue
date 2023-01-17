@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-8xl mx-auto w-full bg-dotted">
+    <section class="max-w-8xl mx-auto w-full bg-dotted">
         <div class="py-24 px-7 inset-0 bg-radial-fade">
             <!-- Body -->
             <div class="max-w-7xl mx-auto py-10 xs:py-16 sm:py-19 md:py-32 sm:px-8 md:px-19 relative w-full">
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup>

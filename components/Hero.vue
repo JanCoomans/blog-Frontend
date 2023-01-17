@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gradient-to-b from-primary-900 to-primary-700 h-auto px-7 pt-7 xs:pt-12 sm:pt-17 pb-24 xs:pb-28 lg:pb-35">
+    <section class="bg-gradient-to-b from-primary-900 to-primary-700 h-auto px-7 pt-7 xs:pt-12 sm:pt-17 pb-24 xs:pb-28 lg:pb-35">
         <div class="max-w-7xl mx-auto relative">
             <div class="absolute top-0 right-0 inline-block z-0  opacity-80 md:opacity-100">
                 <HeroDecorationTR></HeroDecorationTR>
@@ -17,14 +17,14 @@
                 <h1 id="heroHeadline" class="font-dmsans font-bold mb-7 xs:mb-8 md:mb-12">
                     <p>Front-end <br> web developer</p>
                 </h1>
-                <div class="max-w-5xl w-full md:mx-auto text-justify md:text-start">
-                    <h3 id="heroDescription"
+                <article class="max-w-5xl w-full md:mx-auto text-justify md:text-start">
+                    <p id="heroDescription"
                         class="text-gray-300 opacity-80 lg:text-lg font-dmmono text-base font-light md:font:normal leading-6 mb-12 sm:mb-14">
                         I'm a new Front-end web developer.
                         Capable of delivering efficient and responsive websites according to design.
                         Helpful in UI/UX and eager to learn.
-                    </h3>
-                </div>
+                    </p>
+                </article>
                 <div
                     class="py-2 sm:py-3 lg:py-4 w-36 sm:w-40 lg:w-48 mx-auto text-center btn-accent font-dmmono font-medium lg:text-lg">
                     <h3>My work</h3>
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 </template>
 
