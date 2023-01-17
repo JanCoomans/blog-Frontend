@@ -56,9 +56,10 @@ module.exports = {
         '4xl2': '2.75rem',
         title: '3.625rem',
       },
-      dropShadow: {
+      boxShadow: {
         left: '-2px 4px 4px rgba(0, 0, 0, 0.5)',
         right: '2px 4px 4px rgba(0, 0, 0, 0.5)',
+        "xl-dark": '0 10px 30px -15px #000',
       }
     },
   },

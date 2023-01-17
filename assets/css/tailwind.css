@@ -64,7 +64,7 @@
 
     /* CONTACT */
     .contact-item {
-        @apply max-w-xs w-full py-3 px-4 bg-primary-900 rounded-md drop-shadow-right flex;
+        @apply max-w-xs w-full py-3 px-4 bg-primary-900 rounded-md shadow-right flex;
     }
 
     .contact-item svg {
