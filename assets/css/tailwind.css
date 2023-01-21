@@ -15,6 +15,10 @@
     --accent: #FECD6C;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 @layer components {
     /* GENERAL */
@@ -38,6 +42,10 @@
         @apply font-dmsans font-bold text-2xl
     }
 
+    .color-filter-accent{
+        filter: brightness(0) saturate(100%) invert(76%) sepia(78%) saturate(348%) hue-rotate(336deg) brightness(101%) contrast(99%);
+    }
+
 
     /* HEADER: links. Active & hover state. */
     .highlight-active-link{
@@ -52,23 +60,48 @@
         @apply relative hover:after:bg-white hover:after:highlight-active-link; 
     }
 
+    /* PROJECTS */
 
+    /* --- project-image --- */
+    .project-image{
+        @apply h-full md:h-auto after:content-empty md:after:content-none after:absolute after:bg-primary-500 after:mix-blend-color after:inset-0 relative shadow-xl-dark md:shadow-none z-0;
+    }
+
+    .project-right .project-image{
+        @apply col-start-1 col-end-13 md:col-end-7 lm:col-end-8 row-start-1;
+    }
+
+    .project-left .project-image{
+        @apply col-start-1 md:col-start-7  lm:col-start-6 col-end-13 row-start-1;
+    }
+
+    /* --- project-body --- */
+    .project-body{
+        @apply p-10 md:p-0 col-start-1 col-end-13 row-start-1 z-10;
+    }
+
+    .project-right .project-body{
+        @apply md:col-start-6 lm:col-start-7 md:text-right;
+    }
+
+    .project-left .project-body{
+        @apply md:col-end-8 lm:col-end-7;
+    }
+
+    /* --- project-tag --- */
+    .project-right .project-tag{
+        @apply md:justify-end;
+    }
+
+    
     /* SKILLS */
     .skill-item{
         @apply w-1/2 xs:w-1/3 lm:w-1/3 lg:w-1/4 text-center text-base md:text-xl font-dmsans font-bold;
     }
 
-    .skill-item svg{
-         @apply h-9 sm:h-10 w-auto mx-auto mb-3;
-    }
-
     /* CONTACT */
     .contact-item {
         @apply max-w-xs w-full py-3 px-4 bg-primary-900 rounded-md shadow-right flex;
-    }
-
-    .contact-item svg {
-        @apply mr-4;
     }
 
     .contact-divide-line{
@@ -80,10 +113,12 @@
     }
 
     .contact-social {
-        @apply bg-primary-900 h-12 w-12 flex items-center justify-center rounded-full;
+        @apply bg-primary-900 h-12 w-12 p-3 flex items-center justify-center rounded-full cursor-pointer;
     }
 
-    /* PROJECTS */
+    .contact-social:hover img{
+        @apply color-filter-accent;
+    } 
 }
 
 

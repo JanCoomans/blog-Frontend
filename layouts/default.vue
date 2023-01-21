@@ -1,6 +1,6 @@
 <template>
     <div class="text-slate-100">
-        <header class="z-50 font-dmmono fixed w-full bg-primary-900 bg-opacity-95 backdrop-blur-xl md:py-0 py-6 px-7">
+        <header tabindex="1" class="z-50 font-dmmono fixed w-full bg-primary-900 bg-opacity-95 backdrop-blur-xl md:py-0 py-6 px-7">
             <nav
                 class="max-w-7xl mx-auto md:h-20 flex flex-col md:flex-row md:justify-between md:items-center overflow-hidden">
                 <div class="flex justify-between items-center">
@@ -16,21 +16,13 @@
                 </div>
                 <ul :class="[isNavbarActive ? 'h-80 pt-12' : 'h-0']"
                     class="md:h-auto flex md:flex-row flex-col items-center justify-between md:gap-8 lg:gap-12 font-normal text-sm lg:text-base md:pt-0 transition-all duration-300">
+                    
+                    <li v-for="link in header.attributes.navigation" :key="link.id" :class="{ 'btn-accent py-1 px-6': link.button }">
+                        <NuxtLink :to="link.page.data.attributes.uri_path" :class="[ link.button ? 'btn' : 'header-link']">{{ link.page.data.attributes.title }}</NuxtLink>
+                    </li>
 
-                    <li>
-                        <NuxtLink to="/" class="header-link">Projects</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/about" class="header-link">Skills</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/contact" class="header-link">Contact</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/etc" class="header-link">Blog</NuxtLink>
-                    </li>
-                    <li class="btn-accent py-1 px-6">
-                        <NuxtLink to="/resume" class="btn">Resume</NuxtLink>
+                    <li v-for="link in header.attributes.custom_link" :key="link.id" :class="{ 'btn-accent py-1 px-6': link.button }">
+                        <NuxtLink :to="link.URL" target="_blank" :class="[ link.button ? 'btn' : 'header-link']">{{ link.tag }}</NuxtLink>
                     </li>
                 </ul>
             </nav>
@@ -51,15 +43,21 @@
         </div>
         <footer>
             <div class="w-full p-7 text-center bg-primary-900 font-dmmono text-xs">
-                <h5>© Copyright 2022. Made by Jan Coomans</h5>
+                <h5>{{ footer.attributes.text }}</h5>
             </div>
         </footer>
     </div>
 </template>
 
+
 <script setup>
-const isNavbarActive = ref(0);
+    const { find } = useStrapi()
+    const { data: header } = await find('header?populate=deep')
+    const { data: footer } = await find('footer')
+
+    const isNavbarActive = ref(0);
 </script>
+
 
 <style scoped>
 .router-link-exact-active {

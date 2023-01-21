@@ -12,9 +12,9 @@
         </div>
 
         <div class="bg-primary-900 flex flex-col gap-30">
-            <div><!-- Filler --></div>
+            <div id="projects"><!-- Filler --></div>
             <Projects></Projects>
-            <Skills></Skills>
+            <Skills id="skills"></Skills>
             <div class="mb-8"><!-- Filler --></div>
         </div>
 
@@ -33,9 +33,8 @@
             </svg>
         </div>
 
-        <Contact></Contact>
+        <Contact id="contact"></Contact>
     </main>
-
 
 </template>
 

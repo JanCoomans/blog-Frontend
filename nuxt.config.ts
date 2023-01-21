@@ -26,6 +26,8 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         //currencyKey: process.env.CURRENCY_API_KEY,
-        public: {}
+        public: {
+            fileserver: process.env.STRAPI_URL,
+        }
     },
 })
