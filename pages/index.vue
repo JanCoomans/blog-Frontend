@@ -12,14 +12,14 @@
         </div>
 
         <div class="bg-primary-900 flex flex-col gap-30">
-            <div id="projects"><!-- Filler --></div>
+            <div id="projects" class="anchor"><!-- Filler --></div>
             <Projects></Projects>
-            <Skills id="skills"></Skills>
+            <Skills id="skills" class="anchor"></Skills>
             <div class="mb-8"><!-- Filler --></div>
         </div>
 
         <!-- Contact waves seperator -->
-        <div class="relative">
+        <div id="contact" class="anchor relative">
             <svg class="absolute -translate-y-full w-full sm:h-18 lg:h-30 min-h-12 fill-secondary"
                 preserveAspectRatio="none" viewBox="0 0 1920 120" fill="none">
                 <g>
@@ -33,14 +33,62 @@
             </svg>
         </div>
 
-        <Contact id="contact"></Contact>
+        <Contact></Contact>
     </main>
 
 </template>
 
+<script>
+// Highlight header links when target comes in viewport
+export default {
+    data: function () {
+        return {
+            anchors: [],
+            anchorLinks: [],
+        }
+    },
+    created() {
+    },
+    mounted() {
+        this.anchors = Array.from(document.getElementsByClassName("anchor"));
+        this.anchorLinks = Array.from(document.getElementsByClassName("header-link"));
+
+    },
+    methods: {
+        handleScroll() {
+            let focusSection;
+            // Get closest element to bottom of viewport
+            this.anchors.forEach((section) => {
+                if (section.offsetTop - 1 < (window.scrollY + window.innerHeight / 2)) {
+                    focusSection = section;
+                }
+            });
+            // Remove highlight
+            this.anchorLinks.forEach(link => {
+                link.classList.remove('active-link');
+            });
+            // Add highlight
+            if (typeof focusSection !== 'undefined') {
+                this.anchorLinks.forEach(link => {
+                    if (link.getAttribute("href") === `/#${focusSection.getAttribute('id')}`) {
+                        link.classList.add('active-link');
+                    }
+                });
+            }
+        }
+    },
+    beforeMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll)
+    }
+}
+</script>
+
 <script setup>
     //const { find } = useStrapi()
-    //const { data } = await find('welcome-massage')
+    //const { data } = await find('welcome-message')
 </script>
 
 <style scoped>

@@ -52,7 +52,7 @@ html {
         @apply absolute -translate-x-2/4 left-2/4 w-11 h-3px -bottom-3 content-empty invisible md:visible;
     }
 
-    header .router-link-exact-active {
+    header .active-link {
         @apply after:bg-accent after:highlight-active-link; 
     }
     

@@ -1,6 +1,7 @@
 <template>
-    <div class="text-slate-100">
-        <header tabindex="1" class="z-50 font-dmmono fixed w-full bg-primary-900 bg-opacity-95 backdrop-blur-xl md:py-0 py-6 px-7">
+    <div class="text-slate-100" @scroll="navHighlight">
+        <header tabindex="1"
+            class="z-50 font-dmmono fixed w-full bg-primary-900 bg-opacity-95 backdrop-blur-xl md:py-0 py-6 px-7">
             <nav
                 class="max-w-7xl mx-auto md:h-20 flex flex-col md:flex-row md:justify-between md:items-center overflow-hidden">
                 <div class="flex justify-between items-center">
@@ -16,13 +17,19 @@
                 </div>
                 <ul :class="[isNavbarActive ? 'h-80 pt-12' : 'h-0']"
                     class="md:h-auto flex md:flex-row flex-col items-center justify-between md:gap-8 lg:gap-12 font-normal text-sm lg:text-base md:pt-0 transition-all duration-300">
-                    
-                    <li v-for="link in header.attributes.navigation" :key="link.id" :class="{ 'btn-accent py-1 px-6': link.button }">
-                        <NuxtLink :to="link.page.data.attributes.uri_path" :class="[ link.button ? 'btn' : 'header-link']">{{ link.page.data.attributes.title }}</NuxtLink>
+
+                    <li v-for="link in header.attributes.navigation" :key="link.id"
+                        :class="{ 'btn-accent py-1 px-6': link.button }">
+                        <NuxtLink :to="link.page.data.attributes.uri_path"
+                            :class="[link.button ? 'btn' : 'header-link']">{{ link.page.data.attributes.title }}
+                        </NuxtLink>
                     </li>
 
-                    <li v-for="link in header.attributes.custom_link" :key="link.id" :class="{ 'btn-accent py-1 px-6': link.button }">
-                        <NuxtLink :to="link.URL" target="_blank" :class="[ link.button ? 'btn' : 'header-link']">{{ link.tag }}</NuxtLink>
+                    <li v-for="link in header.attributes.custom_link" :key="link.id"
+                        :class="{ 'btn-accent py-1 px-6': link.button }">
+                        <NuxtLink :to="link.URL" target="_blank" :class="[link.button ? 'btn' : 'header-link']">{{
+                            link.tag
+                        }}</NuxtLink>
                     </li>
                 </ul>
             </nav>
@@ -34,7 +41,8 @@
 
         <!-- Footer Wave -->
         <div class="relative">
-            <svg class="absolute -translate-y-full w-full sm:h-7 md:h-9 h-6" preserveAspectRatio="none" viewBox="0 0 1920 35">
+            <svg class="absolute -translate-y-full w-full sm:h-7 md:h-9 h-6" preserveAspectRatio="none"
+                viewBox="0 0 1920 35">
                 <path class="fill-accent" d="M1405.8,15.5c-92.8,3.1-182.7,8.8-275.2,12.2c-131.8,4.9-269.1,5.2-400.7,0.1C602,23,469.3,11,342.9,4.9
 		        C230.9-0.5,108.5-2.7,0,4.1v31h1920v-11C1756.1,12.7,1578.2,9.8,1405.8,15.5L1405.8,15.5z" />
                 <path class="fill-primary-900" d="M1405.8,18.5c-92.8,3.1-182.7,8.8-275.2,12.2c-131.8,4.9-269.1,5.2-400.7,0.1C602,26,469.3,14,342.9,7.9
@@ -54,7 +62,6 @@
     const { find } = useStrapi()
     const { data: header } = await find('header?populate=deep')
     const { data: footer } = await find('footer')
-
     const isNavbarActive = ref(0);
 </script>
 
