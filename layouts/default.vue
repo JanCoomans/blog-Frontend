@@ -1,11 +1,11 @@
 <template>
-    <div class="text-slate-100" @scroll="navHighlight">
+    <div class="text-slate-100">
         <header tabindex="1"
             class="z-50 font-dmmono fixed w-full bg-primary-900 bg-opacity-95 backdrop-blur-xl md:py-0 py-6 px-7">
             <nav
                 class="max-w-7xl mx-auto md:h-20 flex flex-col md:flex-row md:justify-between md:items-center overflow-hidden">
                 <div class="flex justify-between items-center">
-                    <NuxtLink to="/" class="font-bold text-lg after:hidden text-accent">Jan<span
+                    <NuxtLink to="/" class="font-bold text-lg md:text-xl lg:text-2xl after:hidden text-accent">Jan<span
                             class="font-normal text-sm opacity-80">Coomans</span></NuxtLink>
                     <div class="cursor-pointer md:hidden" @click="isNavbarActive = !isNavbarActive">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">

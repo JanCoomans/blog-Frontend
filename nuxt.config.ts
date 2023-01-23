@@ -10,22 +10,18 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            title: 'JanCoomans',
+            title: 'Jan Coomans',
+            htmlAttrs: {
+                lang: 'en'
+            },
             meta: [
                 { name: "description", content: 'personal portfolio of Jan Coomans. Made with Nuxt.js, tailwind CSS and Strapi CMS.'}
             ],
-            script: [
-                {
-                    src: "https://kit.fontawesome.com/71017b4565.js"
-                }
-            ],
             link: [
-                //{ rel: 'stylesheet', href: '' }
-            ]
+            ],
         }
     },
     runtimeConfig: {
-        //currencyKey: process.env.CURRENCY_API_KEY,
         public: {
             fileserver: process.env.STRAPI_URL,
         }

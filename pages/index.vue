@@ -54,12 +54,17 @@ export default {
         this.anchorLinks = Array.from(document.getElementsByClassName("header-link"));
 
     },
+    computed: {
+        halfWindowHeight: function() {
+            return window.innerHeight/2;
+        },
+    },
     methods: {
         handleScroll() {
             let focusSection;
             // Get closest element to bottom of viewport
             this.anchors.forEach((section) => {
-                if (section.offsetTop - 1 < (window.scrollY + window.innerHeight / 2)) {
+                if (section.offsetTop < (window.scrollY + this.halfWindowHeight)) {
                     focusSection = section;
                 }
             });
