@@ -5,6 +5,7 @@ module.exports = {
       screens: {
         'xs': '576px'/* => @media (min-width: 576px) { ... } */,
         'lm': '960px'/* => @media (min-width: 960px) { ... }*/,
+        '7xlp': '1336px'/* 1280px + 28px padding = 1336px */,
       },
       fontFamily: {
         dmmono: ['DM Mono'],

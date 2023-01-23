@@ -1,7 +1,9 @@
 <template>
     <div class="text-slate-100">
+        <ButtonScrollTop></ButtonScrollTop>
+
         <header tabindex="1"
-            class="z-50 font-dmmono fixed w-full bg-primary-900 bg-opacity-95 backdrop-blur-xl md:py-0 py-6 px-7">
+            class="z-40 font-dmmono fixed w-full bg-primary-900 bg-opacity-95 backdrop-blur-xl md:py-0 py-6 px-7">
             <nav
                 class="max-w-7xl mx-auto md:h-20 flex flex-col md:flex-row md:justify-between md:items-center overflow-hidden">
                 <div class="flex justify-between items-center">

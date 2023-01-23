@@ -118,7 +118,12 @@ html {
 
     .contact-social:hover img{
         @apply color-filter-accent;
-    } 
+    }
+
+    /* SCROLL BUTTON */
+    .right-hover-content{
+        right: calc(50% - 668px);
+    }
 }
 
 
