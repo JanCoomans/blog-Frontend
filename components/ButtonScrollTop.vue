@@ -1,11 +1,11 @@
 <template>
     <div id="scrollBtn" class="fixed opacity-0 transition-opacity pr-7 bottom-5 right-0 7xlp:right-hover-content z-50">
-        <div @click="scrollTop" class="w-16 h-16 rounded-full bg-secondary cursor-pointer relative">
+        <div id="scrollBtnContent" @click="scrollTop" class="w-16 h-16 rounded-full bg-secondary cursor-pointer relative">
             <svg class="stroke-accent w-full h-full">
                 <circle id="btnOutline" cx="32" cy="32" r="30" stroke-width="3" fill="none" />
             </svg>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <svg id="scrollArrow" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
             </svg>
         </div>
@@ -25,6 +25,8 @@ export default {
     mounted() {
         this.scrollBtn = document.getElementById("scrollBtn");
         this.scrollBtnPath = document.getElementById("btnOutline");
+        this.buttonFade();
+        this.updateButtonProgress();
         document.addEventListener('scroll', this.handleScroll);
     },
     computed: {
@@ -69,6 +71,14 @@ function scrollTop() {
 </script>
 
 <style lang="scss" scoped>
+.right-hover-content{
+    right: calc(50% - 668px);
+}
+
+#scrollBtnContent:hover{
+    background: rgba(var(--secondary-rgb), 0.5);
+}
+
 #scrollBtn circle {
     stroke-dasharray: 0;
     stroke-dashoffset: 0;

@@ -8,10 +8,11 @@
 
 :root{
     --primary-900-rgb: 15, 20, 27;
+    --secondary-rgb: 42, 68, 84;
     --primary-900: rgb(var(--primary-900-rgb));/* #0E141B */
     --primary-700: #18222E;
     --primary-500: #17232D;
-    --secondary: #2A4454;
+    --secondary: rgb(var(--secondary-rgb)); /* #2A4454 */
     --accent: #FECD6C;
 }
 
@@ -121,8 +122,9 @@ html {
     }
 
     /* SCROLL BUTTON */
-    .right-hover-content{
-        right: calc(50% - 668px);
+
+    #scrollBtnContent:hover #scrollArrow {
+        @apply h-8 w-8;
     }
 }
 
