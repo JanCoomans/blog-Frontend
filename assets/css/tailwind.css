@@ -122,6 +122,9 @@ html {
     }
 
     /* SCROLL BUTTON */
+    .right-hover-content{
+        right: calc(50% - 668px);
+    }
 
     #scrollBtnContent:hover #scrollArrow {
         @apply h-8 w-8;

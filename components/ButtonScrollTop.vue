@@ -71,10 +71,6 @@ function scrollTop() {
 </script>
 
 <style lang="scss" scoped>
-.right-hover-content{
-    right: calc(50% - 668px);
-}
-
 #scrollBtnContent:hover{
     background: rgba(var(--secondary-rgb), 0.5);
 }
