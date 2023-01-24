@@ -17,13 +17,13 @@
                         <h4 class="w-min xs:w-auto">{{ hero.attributes.overline_two }}</h4>
                     </template>
                 </div>
-                <h1 id="heroHeadline" class="font-dmsans font-bold mb-7 xs:mb-8 md:mb-12">
-                    <p>
+                <div id="heroHeadline" class="font-dmsans font-bold mb-7 xs:mb-8 md:mb-12">
+                    <h1>
                         {{ hero.attributes.title_line_one }}
                         <br>
                         {{ hero.attributes.title_line_two }}
-                    </p>
-                </h1>
+                    </h1>
+                </div>
                 <article class="max-w-5xl w-full md:mx-auto text-justify md:text-start">
                     <p id="heroDescription"
                         class="text-gray-300 opacity-80 lg:text-lg font-dmmono text-base font-light md:font:normal leading-6 mb-12 sm:mb-14">

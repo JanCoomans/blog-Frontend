@@ -18,6 +18,7 @@ export default defineNuxtConfig({
                 { name: "description", content: 'personal portfolio of Jan Coomans. Made with Nuxt.js, tailwind CSS and Strapi CMS.'}
             ],
             link: [
+                { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }
             ],
         }
     },

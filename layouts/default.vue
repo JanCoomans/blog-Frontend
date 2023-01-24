@@ -53,7 +53,7 @@
         </div>
         <footer>
             <div class="w-full p-7 text-center bg-primary-900 font-dmmono text-xs">
-                <h5>{{ footer.attributes.text }}</h5>
+                <h6>{{ footer.attributes.text }}</h6>
             </div>
         </footer>
     </div>
