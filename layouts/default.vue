@@ -17,21 +17,25 @@
                         </svg>
                     </div>
                 </div>
-                <ul :class="[isNavbarActive ? 'h-80 pt-12' : 'h-0']"
-                    class="md:h-auto flex md:flex-row flex-col items-center justify-between md:gap-8 lg:gap-12 font-normal text-sm lg:text-base md:pt-0 transition-all duration-300">
+                <ul :class="[isNavbarActive ? 'h-80 pt-10' : 'h-0']"
+                    class="md:h-auto flex md:flex-row flex-col items-center justify-between md:gap-8 lg:gap-12 font-normal text-sm lg:text-base md:pt-0 transition-all duration-300 overflow-hidden md:overflow-visible">
 
                     <li v-for="link in header.attributes.navigation" :key="link.id"
-                        :class="{ 'btn-accent py-1 px-6': link.button }">
+                        class="w-full md:w-auto text-center" :class="{ 'flex md:relative': link.button}">
+
                         <NuxtLink :to="link.page.data.attributes.uri_path"
-                            :class="[link.button ? 'btn' : 'header-link']">{{ link.page.data.attributes.title }}
+                            :class="[link.button ? 'header-button' : 'header-link']">
+                            {{ link.page.data.attributes.title }}
                         </NuxtLink>
                     </li>
 
                     <li v-for="link in header.attributes.custom_link" :key="link.id"
-                        :class="{ 'btn-accent py-1 px-6': link.button }">
-                        <NuxtLink :to="link.URL" target="_blank" :class="[link.button ? 'btn' : 'header-link']">{{
-                            link.tag
-                        }}</NuxtLink>
+                        class="w-full md:w-auto text-center" :class="{ 'flex md:relative': link.button}">
+
+                        <NuxtLink :to="link.URL" target="_blank"
+                            :class="[link.button ? 'header-button' : 'header-link']">
+                            {{ link.tag }}
+                        </NuxtLink>
                     </li>
                 </ul>
             </nav>
@@ -61,10 +65,10 @@
 
 
 <script setup>
-    const { find } = useStrapi()
-    const { data: header } = await find('header?populate=deep')
-    const { data: footer } = await find('footer')
-    const isNavbarActive = ref(0);
+const { find } = useStrapi()
+const { data: header } = await find('header?populate=deep')
+const { data: footer } = await find('footer')
+const isNavbarActive = ref(0);
 </script>
 
 
